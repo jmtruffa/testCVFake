@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+    margin: 50px;
+}
+
+.container .lado-izquierdo {
+    position: relative;
+    background: #0f5576;
+    padding: 40px;
+}
+
+.container .lado-derecho {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.texto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.texto .foto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.texto .foto img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.texto h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.infoContacto {
+    padding-top: 40px;
+}
+
+.titulo {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.infoContacto ul {
+    position: relative;
+}
+
+.infoContacto ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.descargar ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.infoContacto ul li .icono {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+
+}
+
+.descargar ul li .icono {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+
+}
+
+.infoContacto ul li span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.texto ul li span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.infoContacto.formacion li {
+    margin-bottom: 15px;
+}
+
+.infoContacto.formacion h5 {
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.infoContacto.formacion h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+
+.infoContacto.formacion h4 {
+    color: #fff;
+    font-weight: 100;
+}
+
+.infoContacto.idioma .avance {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+.infoContacto.idioma .avance div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.sobremi {
+    margin-bottom: 50px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.titulo2 {
+    color: #003147;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+
+.aniocompania {
+    margin-bottom: 10px;
+}
+
+.sobremi .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.sobremi .box .aniocompania {
+    min-width: 160px;
+}
+
+.sobremi .box .aniocompania h5 {
+    text-transform: uppercase;
+    color:  #848c90;
+    font-weight: 400px;
+}
+
+.sobremi .box .aniocompania .data h4 a{
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+.habilidades .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.habilidades .box h4 {
+    color: #848c99;
+    font-weight: 500;
+}
+
+.habilidades .box .avance {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.habilidades .box .avance div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+@media (max-width: 1000px) 
+{
+    .container 
+        {
+            margin: 10px;
+            grid-template-columns: repeat(1,1fr);
+        }
+}
+
+
+@media (max-width: 600px) 
+{
+    .sobremi .box {
+        flex-direction: column;
+    }
+
+
+.habilidades .box {
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position:fixed; /* Situado en el viewport, en el centro */
+  z-index: 1; /* Situado sobre todo */
+  /*padding-top: 100px; */
+  /*left: 0;
+  /*top: 0;*/
+  width: 80%; 
+  /*height: 100%; 
+  overflow: auto; /* Activar scroll si es necesario 
+  
+  background-color: rgba(0,0,0,0.4); /* Fondo oscuro */
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+/* El botón de cierre */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
