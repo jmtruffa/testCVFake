@@ -8,7 +8,7 @@ window.onload = function() {
     
 
     //Tomo el elemento span que cierra el modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0]; 
 
     //llamo a la funcion openModal() cuando se hace click en los botones
 
